@@ -56,12 +56,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         totalSwitches: 2,
                         labels: const ['Iniciar Sesion', 'Registrarse'],
                         radiusStyle: true,
-                        onToggle: (opcion){
-                          
-                          setState(() {
-                            
-                          });
                         
+                        onToggle: (opcion){
+                          print('$opcion');
+                          
                         },
                       ),
                       if (opcion == 1)
