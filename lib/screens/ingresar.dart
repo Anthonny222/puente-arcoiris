@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:puente_arcoiris/routes/app-routes.dart';
 import 'package:puente_arcoiris/theme/app_theme.dart';
 
 
@@ -36,7 +37,9 @@ class IngresarScreen extends StatelessWidget {
                   height: size.height * 0.47,
                 ),
                 ElevatedButton(
-                  onPressed: (){}, 
+                  onPressed: (){
+                    Navigator.pushNamed(context, AppRoutes.rutaLogin);
+                  }, 
                   child: const Text('Iniciar Sesion', style: TextStyle(color: Colors.black, fontFamily: 'Comic Neue', fontSize: 16),),
                 ),
                 Row(
