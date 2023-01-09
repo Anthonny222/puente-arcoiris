@@ -77,7 +77,7 @@ class _MenuLoginScreenState extends State<MenuLoginScreen> {
                           if(initialIndex == 0)
                             LoginScreen()
                           else if(initialIndex == 1)
-                            Text('Soy un Registrarse')
+                            RegistrarseScreen()
                         ],
                       ),
                     ),
