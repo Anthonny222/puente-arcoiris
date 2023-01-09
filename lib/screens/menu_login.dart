@@ -43,43 +43,43 @@ class _MenuLoginScreenState extends State<MenuLoginScreen> {
                   fit: BoxFit.contain,
                   width: size.width * 0.4 ,
                 ),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Container(
+                Container(
+                  decoration: BoxDecoration(
                     color: Colors.white54,
-                    height: size.height*0.6,
-                    width: size.width*0.75,
-                    margin: EdgeInsets.only(top: size.height*0.07),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
-                      child: Column(
-                        children: [
-                          ToggleSwitch(
-                            minWidth: 110,
-                            minHeight: 45,
-                            cornerRadius: 50.0,
-                            activeBgColors: const [[AppTheme.primary], [AppTheme.primary]],
-                            activeFgColor: const Color.fromARGB(255, 0, 0, 0),
-                            // inactiveBgColor: Colors.grey,
-                            inactiveFgColor: Colors.white,
-                            
-                            changeOnTap: false,
-                            totalSwitches: 2,
-                            labels: const ['Iniciar Sesion', 'Registrarse'],
-                            radiusStyle: true,
-                            initialLabelIndex: initialIndex,                       
-                            onToggle: (index){
-                              setState(() {
-                                initialIndex  = index;
-                              });
-                            },
-                          ),
-                          if(initialIndex == 0)
-                            LoginScreen()
-                          else if(initialIndex == 1)
-                            RegistrarseScreen()
-                        ],
-                      ),
+                    borderRadius: BorderRadius.circular(25)
+                  ),
+                  height: size.height*0.6,
+                  width: size.width*0.75,
+                  margin: EdgeInsets.only(top: size.height*0.07),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
+                    child: Column(
+                      children: [
+                        ToggleSwitch(
+                          minWidth: 110,
+                          minHeight: 45,
+                          cornerRadius: 50.0,
+                          activeBgColors: const [[AppTheme.primary], [AppTheme.primary]],
+                          activeFgColor: const Color.fromARGB(255, 0, 0, 0),
+                          // inactiveBgColor: Colors.grey,
+                          inactiveFgColor: Colors.white,
+                          
+                          changeOnTap: false,
+                          totalSwitches: 2,
+                          labels: const ['Iniciar Sesion', 'Registrarse'],
+                          radiusStyle: true,
+                          initialLabelIndex: initialIndex,                       
+                          onToggle: (index){
+                            setState(() {
+                              initialIndex  = index;
+                            });
+                          },
+                        ),
+                        if(initialIndex == 0)
+                          const LoginScreen()
+                        else if(initialIndex == 1)
+                          const RegistrarseScreen()
+                      ],
                     ),
                   ),
                 )

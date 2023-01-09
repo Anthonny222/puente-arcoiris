@@ -19,11 +19,11 @@ class LoginScreen extends StatelessWidget {
       children: [
         SizedBox(height: size.height *0.03,),
         const Text('Bienvenido', style: TextStyle(fontFamily: 'Comic Neue Bold', fontSize: 25, ),),
-        SizedBox( height: size.height * 0.05),
+        SizedBox( height: size.height * 0.03),
         const InputPersonalizado(labelText: 'Correo', hintText: 'Correo', keyboardType: TextInputType.emailAddress ),
         SizedBox(height: size.height*0.01,),
         const InputPersonalizado(labelText: 'Contraseña', hintText: 'Contraseña',obscureText: true,),
-        SizedBox(height: size.height*0.06),
+        SizedBox(height: size.height*0.04),
         ElevatedButton(
           onPressed: (){
             Navigator.pushNamed(context, AppRoutes.rutaMenuPrincipal);
@@ -40,6 +40,27 @@ class LoginScreen extends StatelessWidget {
         TextButton(
           onPressed: (){}, 
           child: const Text('¿Olvido su contraseña?', style: TextStyle(color: Colors.black, fontFamily: 'Comic Neue', fontSize: 16),)
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: (){}, 
+              child: const Image(
+                image: AssetImage('assets/google.png'),
+                fit: BoxFit.cover,
+                height: 30,
+              )
+            ),
+            TextButton(
+              onPressed: (){}, 
+              child: const Image(
+                image: AssetImage('assets/facebook.png'),
+                fit: BoxFit.cover,
+                height: 30,
+              )
+            )
+          ],
         )
       ],
     );
