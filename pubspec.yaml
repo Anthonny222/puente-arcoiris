@@ -83,6 +83,10 @@ flutter:
     - family: Comic Neue
       fonts:
         - asset: assets/fonts/ComicNeue-Regular.ttf
+
+    - family: Comic Neue Bold
+      fonts:
+        - asset: assets/fonts/ComicNeue-Bold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

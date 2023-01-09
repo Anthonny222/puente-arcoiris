@@ -14,12 +14,30 @@ class AppTheme{
       backgroundColor: primary,
       shape: const StadiumBorder(),
       elevation: 0,
-      padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 90),
+      padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 70),
 
-      ),
+    ),
+  ),
 
+  // InputDecoration Theme
+
+  inputDecorationTheme: const  InputDecorationTheme(
+
+    floatingLabelStyle: TextStyle(color: Colors.black87, fontFamily: 'Comic Neue'),
+    hintStyle: TextStyle(fontFamily: 'Comic Neue'),
+    labelStyle: TextStyle(fontFamily: 'Comic Neue'),
+    enabledBorder: UnderlineInputBorder(
+      borderSide: BorderSide(color: Colors.black87,  ),
+      
+    ),
+
+    focusedBorder: UnderlineInputBorder(
+      borderSide: BorderSide(color: Colors.black87, )
+    ),
 
   )
+
+
 
 
   );

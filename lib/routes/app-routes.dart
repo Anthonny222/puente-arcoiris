@@ -13,7 +13,7 @@ class AppRoutes{
   static Map<String, Widget Function (BuildContext context)> routes ={
 
     'inicio': (BuildContext context) => const IngresarScreen(),
-    'login': (BuildContext context) => const LoginScreen()
+    'login': (BuildContext context) => const MenuLoginScreen()
 
 
   };
