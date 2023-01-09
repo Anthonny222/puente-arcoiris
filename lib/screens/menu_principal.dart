@@ -3,6 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:puente_arcoiris/theme/app_theme.dart';
 
+import '../widgets/widgets.dart';
+
 class MenuPrincipalScreen extends StatelessWidget {
    
   const MenuPrincipalScreen({Key? key}) : super(key: key);
@@ -35,14 +37,19 @@ class MenuPrincipalScreen extends StatelessWidget {
             children: [
               const SizedBox(height: 80,),
               const Text('4 Pets', style: TextStyle(color: Colors.black, fontFamily: 'Comic Neue', decorationColor: AppTheme.primary),),
+              
               const SizedBox(height: 100,),
-              ElevatedButton(onPressed: (){}, child: Text('Hola?')),
+              const BotonPersonalizadoMenu(icono: Icons.brush , texto: 'Perruqueria'),
+              
               const SizedBox(height: 40,),
-              ElevatedButton(onPressed: (){}, child: Text('Hola?')),
+              const BotonPersonalizadoMenu(icono: Icons.store_mall_directory_rounded , texto: 'Tienda'),
+
               const SizedBox(height: 40,),
-              ElevatedButton(onPressed: (){}, child: Text('Hola?')),
+              const BotonPersonalizadoMenu(icono: Icons.health_and_safety , texto: 'Salud',),
+
               const SizedBox(height: 40,),
-              ElevatedButton(onPressed: (){}, child: Text('Hola?')),
+              const BotonPersonalizadoMenu(icono: Icons.add_box , texto: 'Funeraria',),
+
               Expanded(child: Container(),)
             ],
           ),
@@ -51,3 +58,4 @@ class MenuPrincipalScreen extends StatelessWidget {
     );
   }
 }
+
