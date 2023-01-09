@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:puente_arcoiris/routes/app-routes.dart';
 
 import '../widgets/widgets.dart';
 
@@ -24,7 +25,9 @@ class LoginScreen extends StatelessWidget {
         const InputPersonalizado(labelText: 'Contraseña', hintText: 'Contraseña',obscureText: true,),
         SizedBox(height: size.height*0.06),
         ElevatedButton(
-          onPressed: (){},
+          onPressed: (){
+            Navigator.pushNamed(context, AppRoutes.rutaMenuPrincipal);
+          },
           child: 
           const Text(
             'Iniciar Sesion', 

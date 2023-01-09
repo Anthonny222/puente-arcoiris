@@ -6,8 +6,8 @@ import 'package:toggle_switch/toggle_switch.dart';
 
 
 class MenuLoginScreen extends StatefulWidget {
-  
 
+    
    
   const MenuLoginScreen({Key? key}) : super(key: key);
 
@@ -67,7 +67,7 @@ class _MenuLoginScreenState extends State<MenuLoginScreen> {
                             totalSwitches: 2,
                             labels: const ['Iniciar Sesion', 'Registrarse'],
                             radiusStyle: true,
-                            initialLabelIndex: initialIndex,
+                            initialLabelIndex: initialIndex,                       
                             onToggle: (index){
                               setState(() {
                                 initialIndex  = index;
