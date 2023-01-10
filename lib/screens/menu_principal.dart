@@ -1,6 +1,6 @@
-import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:puente_arcoiris/routes/app-routes.dart';
 import 'package:puente_arcoiris/theme/app_theme.dart';
 
 import '../widgets/widgets.dart';
@@ -36,19 +36,19 @@ class MenuPrincipalScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               const SizedBox(height: 80,),
-              const Text('4 Pets', style: TextStyle(color: Colors.black, fontFamily: 'Comic Neue', decorationColor: AppTheme.primary),),
+              const Text('Puente Arcoiris', style: TextStyle(color: Colors.black, fontFamily: 'Comic Neue', decorationColor: AppTheme.primary, fontSize: 32),),
               
-              const SizedBox(height: 100,),
-              const BotonPersonalizadoMenu(icono: Icons.brush , texto: 'Perruqueria'),
+              const SizedBox(height: 130,),
+              BotonPersonalizadoMenu(icono: Icons.brush , texto: 'Perruqueria', ruta: AppRoutes.rutaPerruqueria),
               
               const SizedBox(height: 40,),
-              const BotonPersonalizadoMenu(icono: Icons.store_mall_directory_rounded , texto: 'Tienda'),
+              BotonPersonalizadoMenu(icono: Icons.store_mall_directory_rounded , texto: 'Tienda', ruta: AppRoutes.rutaPerruqueria),
 
               const SizedBox(height: 40,),
-              const BotonPersonalizadoMenu(icono: Icons.health_and_safety , texto: 'Salud',),
+              BotonPersonalizadoMenu(icono: Icons.health_and_safety , texto: 'Salud', ruta: AppRoutes.rutaPerruqueria),
 
               const SizedBox(height: 40,),
-              const BotonPersonalizadoMenu(icono: Icons.add_box , texto: 'Funeraria',),
+              BotonPersonalizadoMenu(icono: Icons.add_box , texto: 'Funeraria', ruta: AppRoutes.rutaPerruqueria),
 
               Expanded(child: Container(),)
             ],
