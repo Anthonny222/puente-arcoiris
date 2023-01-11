@@ -19,6 +19,7 @@ class SaludScreen extends StatelessWidget {
       body: Center(
          child: Text('SaludScreen'),
       ),
+      bottomNavigationBar: Navegacion(initialIndex: 2),
     );
   }
 }

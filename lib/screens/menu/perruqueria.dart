@@ -16,10 +16,22 @@ class PerruqueriaScreen extends StatelessWidget {
         backgroundColor: AppTheme.primary,
         elevation: 0,
       ),
-      body: Center(
-         child: Text('PerruqueriaScreen'),
+      body: ListView(
+        children: const[
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+            
+          ),
+            CartaBotonPersonalizado(),
+            CartaBotonPersonalizado(),
+            CartaBotonPersonalizado(),
+        ]
       ),
+      bottomNavigationBar: Navegacion(initialIndex: 0,),
     );
   }
 }
+
+
+
 

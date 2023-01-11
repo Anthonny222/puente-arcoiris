@@ -19,6 +19,7 @@ class FunerariaScreen extends StatelessWidget {
       body: Center(
          child: Text('FunerariaScreen'),
       ),
+      bottomNavigationBar: Navegacion(initialIndex: 3),
     );
   }
 }

@@ -18,6 +18,7 @@ class TiendaScreen extends StatelessWidget {
       body: Center(
          child: Text('TiendaScreen'),
       ),
+      bottomNavigationBar: Navegacion(initialIndex: 1),
     );
   }
 }
