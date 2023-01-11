@@ -22,12 +22,32 @@ class PerruqueriaScreen extends StatelessWidget {
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             
           ),
-            CartaBotonPersonalizado(),
-            CartaBotonPersonalizado(),
-            CartaBotonPersonalizado(),
+            CartaBotonPersonalizado(
+              raza: 'Razas Pequeñas',
+              kgTipo: '10 kg o menos',
+              image: 'assets/raza_pequeña.png',
+              descripcion: 'adsas',
+              precio: '\$5',
+            ),
+
+            CartaBotonPersonalizado(
+              raza: 'Razas Medianas', 
+              kgTipo: '10-30 kg ', 
+              image: 'assets/raza_mediana.png', 
+              descripcion: 'adsa', 
+              precio: '\$8',
+            ),
+
+            CartaBotonPersonalizado(
+              raza: 'Razas Grandes',
+              kgTipo: '30kg o mas',
+              image: 'assets/raza_grande.png',
+              descripcion: 'dadsa',
+              precio: '\$15',
+            ),
         ]
       ),
-      bottomNavigationBar: Navegacion(initialIndex: 0,),
+      bottomNavigationBar: const Navegacion(initialIndex: 0,),
     );
   }
 }
