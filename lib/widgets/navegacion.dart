@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:puente_arcoiris/theme/app_theme.dart';
+
+import '../models/providers/ui_provider.dart';
 
 
 class Navegacion extends StatelessWidget {
 
-  final int initialIndex;
-
   const Navegacion({
-    Key? key, required this.initialIndex,
+    Key? key
   }) : super(key: key);
 
 
@@ -15,15 +16,20 @@ class Navegacion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
+    final uiProvider = Provider.of<UiProvider>(context);
+
+    final currentIndex = uiProvider.selectedMenuOpt;
+
 
     return BottomNavigationBar(
+      onTap: (int i) => uiProvider.selectedMenuOpt = i,
+      currentIndex: currentIndex ,
       showSelectedLabels: false,
       showUnselectedLabels: false,
-
+      
       backgroundColor: Colors.grey,
       unselectedItemColor: Colors.black,
       selectedItemColor: AppTheme.primary,
-      currentIndex: initialIndex,
       items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.brush),
@@ -42,6 +48,7 @@ class Navegacion extends StatelessWidget {
           label: 'Funeraria'
         )
       ],
+      
     ); 
   }
 }

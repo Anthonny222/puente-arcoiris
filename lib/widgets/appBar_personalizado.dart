@@ -1,15 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../models/providers/ui_provider.dart';
 
 class AppBarPersonalizado extends StatelessWidget {
 
-  final String titulo;
 
   const AppBarPersonalizado({
-    Key? key, required this.titulo,
+    Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
+    String titulo = '';
+
+    final uiProvider = Provider.of<UiProvider>(context);
+
+    final currentIndex = uiProvider.selectedMenuOpt;
+
+    if (currentIndex == 0){
+      titulo = 'Perruqueria';
+    }else if (currentIndex == 1){
+      titulo = 'Tienda';
+    }else if (currentIndex == 2){
+      titulo = 'Salud';
+    }else if (currentIndex == 3){
+      titulo = 'Funeraria';
+    }
+    
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [

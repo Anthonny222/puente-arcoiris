@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:puente_arcoiris/routes/app-routes.dart';
 import 'package:puente_arcoiris/theme/app_theme.dart';
 
 import '../../widgets/widgets.dart';
@@ -39,16 +38,16 @@ class MenuPrincipalScreen extends StatelessWidget {
               const Text('Puente Arcoiris', style: TextStyle(color: Colors.black, fontFamily: 'Comic Neue', decorationColor: AppTheme.primary, fontSize: 32),),
               
               const SizedBox(height: 130,),
-              const BotonPersonalizadoMenu(icono: Icons.brush , texto: 'Perruqueria', ruta: AppRoutes.rutaPerruqueria),
+              const BotonPersonalizadoMenu(icono: Icons.brush , texto: 'Perruqueria'),
               
               const SizedBox(height: 40,),
-              const BotonPersonalizadoMenu(icono: Icons.store_mall_directory_rounded , texto: 'Tienda', ruta: AppRoutes.rutaTienda),
+              const BotonPersonalizadoMenu(icono: Icons.store_mall_directory_rounded , texto: 'Tienda'),
 
               const SizedBox(height: 40,),
-              const BotonPersonalizadoMenu(icono: Icons.health_and_safety , texto: 'Salud', ruta: AppRoutes.rutaSalud),
+              const BotonPersonalizadoMenu(icono: Icons.health_and_safety , texto: 'Salud'),
 
               const SizedBox(height: 40,),
-              const BotonPersonalizadoMenu(icono: Icons.add_box , texto: 'Funeraria', ruta: AppRoutes.rutaFuneraria),
+              const BotonPersonalizadoMenu(icono: Icons.add_box , texto: 'Funeraria'),
 
               Expanded(child: Container(),)
             ],

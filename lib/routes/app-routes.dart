@@ -21,6 +21,7 @@ class AppRoutes{
   static const rutaTienda = 'tienda';
   static const rutaSalud = 'salud';
   static const rutaFuneraria = 'funeraria';
+  static const rutaMenuNav = 'menu_nav';
 
 
   static Map<String, Widget Function (BuildContext context)> routes ={
@@ -30,10 +31,12 @@ class AppRoutes{
     
     'menu_p': (BuildContext context) => const MenuPrincipalScreen(),
     
+    'menu_nav': (BuildContext context) => const MenuNavigationScreen(), 
     'perruqueria': (BuildContext context) => const PerruqueriaScreen(),
     'tienda': (BuildContext context) => const TiendaScreen(),
     'salud': (BuildContext context) => const SaludScreen(),
-    'funeraria': (BuildContext context) => const FunerariaScreen()
+    'funeraria': (BuildContext context) => const FunerariaScreen(),
+    
 
   };
 

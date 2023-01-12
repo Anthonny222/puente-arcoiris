@@ -10,11 +10,12 @@ class CartaTienda extends StatelessWidget {
     return TextButton(
       style: ButtonStyle(),
       child: Card(
-        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+        // margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
         child: Column(
           children: const [
-            Image(image: AssetImage('assets/raza_pequeña.png')),
-            Text('Arnes')
+            SizedBox(height: 20),
+            Image(image: AssetImage('assets/arnes.png'),height: 140, fit: BoxFit.cover,),
+            Text('Arnes', style: TextStyle(fontFamily: 'Comic Neue', fontSize: 18),)
           ],
         ),
       ),

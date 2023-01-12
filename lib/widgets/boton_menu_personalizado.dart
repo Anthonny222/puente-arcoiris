@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:puente_arcoiris/routes/app-routes.dart';
+
+
 
 
 class BotonPersonalizadoMenu extends StatelessWidget {
@@ -7,16 +10,17 @@ class BotonPersonalizadoMenu extends StatelessWidget {
 
   final IconData icono;
   final String texto;
-  final String ruta;
+
 
   const BotonPersonalizadoMenu({
-    Key? key, required this.icono, required this.texto, required this.ruta,
+    Key? key, required this.icono, required this.texto,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    
     return ElevatedButton(onPressed: (){
-      Navigator.pushNamed(context, ruta);
+      Navigator.pushNamed(context, AppRoutes.rutaMenuNav);
     },
       style: ElevatedButton.styleFrom(
         maximumSize: const Size.fromWidth(200),

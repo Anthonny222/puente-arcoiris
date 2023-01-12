@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:puente_arcoiris/theme/app_theme.dart';
-
-import '../../widgets/widgets.dart';
 
 class SaludScreen extends StatelessWidget {
    
@@ -9,17 +6,8 @@ class SaludScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const AppBarPersonalizado(titulo: 'Salud',),
-        automaticallyImplyLeading: false,
-        backgroundColor: AppTheme.primary,
-        elevation: 0,
-      ),
-      body: Center(
+    return const Center(
          child: Text('SaludScreen'),
-      ),
-      bottomNavigationBar: Navegacion(initialIndex: 2),
-    );
+      );
   }
 }

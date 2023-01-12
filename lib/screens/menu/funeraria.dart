@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/app_theme.dart';
-import '../../widgets/widgets.dart';
 
 class FunerariaScreen extends StatelessWidget {
    
@@ -9,17 +7,12 @@ class FunerariaScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const AppBarPersonalizado(titulo: 'Funeraria',),
-        automaticallyImplyLeading: false,
-        backgroundColor: AppTheme.primary,
-        elevation: 0,
-      ),
-      body: Center(
+    return  Center(
          child: Text('FunerariaScreen'),
-      ),
-      bottomNavigationBar: Navegacion(initialIndex: 3),
-    );
+      
+      );
   }
 }
+
+
+

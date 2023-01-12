@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:puente_arcoiris/models/providers/ui_provider.dart';
 import 'package:puente_arcoiris/routes/app-routes.dart';
 import 'package:puente_arcoiris/theme/app_theme.dart';
 
@@ -23,12 +25,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
 
 
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Puente Arcoiris',
-      theme: AppTheme.lighTheme,
-      initialRoute: AppRoutes.rutaInicial,
-      routes: AppRoutes.routes,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: ( _ ) => UiProvider())
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Puente Arcoiris',
+        theme: AppTheme.lighTheme,
+        initialRoute: AppRoutes.rutaInicial,
+        routes: AppRoutes.routes,
+      ),
     );
   }
 }
