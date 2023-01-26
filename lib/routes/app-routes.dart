@@ -1,9 +1,6 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:puente_arcoiris/screens/menu/funeraria.dart';
-import 'package:puente_arcoiris/screens/menu/salud.dart';
-import 'package:puente_arcoiris/screens/menu/tienda.dart';
 import 'package:puente_arcoiris/screens/screens.dart';
 
 
