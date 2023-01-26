@@ -1,20 +1,15 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:puente_arcoiris/models/providers/ui_provider.dart';
 import 'package:puente_arcoiris/routes/app-routes.dart';
 import 'package:puente_arcoiris/theme/app_theme.dart';
 
+// Importaciones de Firebase
+import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 
-Future <void> main() async {
-
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
-
-}
+void main() => runApp(const MyApp());
 
 
 class MyApp extends StatelessWidget {
