@@ -46,7 +46,7 @@ class _MenuNavigation extends StatelessWidget {
       return const TiendaScreen();
 
       case 2: 
-      return const SaludScreen();
+      return SaludScreen();
 
       case 3: 
       return const FunerariaScreen();

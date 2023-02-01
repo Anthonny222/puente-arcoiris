@@ -1,4 +1,6 @@
 
+export 'package:puente_arcoiris/widgets/botonFuneraria.dart';
+
 export 'package:puente_arcoiris/widgets/carta_tienda.dart';
 
 export 'package:puente_arcoiris/widgets/botonCarta_personalizado.dart';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:puente_arcoiris/theme/app_theme.dart';
 
 class CartaTienda extends StatelessWidget {
   const CartaTienda({
@@ -7,19 +8,22 @@ class CartaTienda extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      style: ButtonStyle(),
-      child: Card(
-        // margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 15),
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: TextButton(
+        style: TextButton.styleFrom(
+          backgroundColor: Colors.grey[100],
+          foregroundColor: AppTheme.primary   
+        ),
         child: Column(
           children: const [
             SizedBox(height: 20),
             Image(image: AssetImage('assets/arnes.png'),height: 140, fit: BoxFit.cover,),
-            Text('Arnes', style: TextStyle(fontFamily: 'Comic Neue', fontSize: 18),)
+            Text('Arnes', style: TextStyle(fontFamily: 'Comic Neue', fontSize: 18, color: Colors.black))
           ],
         ),
+        onPressed: (){},
       ),
-      onPressed: (){},
     );
   }
 }

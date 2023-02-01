@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:puente_arcoiris/services/firebase/firebase_service.dart';
+import 'package:puente_arcoiris/widgets/widgets.dart';
 
 
 class FunerariaScreen extends StatelessWidget {
@@ -8,21 +9,33 @@ class FunerariaScreen extends StatelessWidget {
     
   @override
   Widget build(BuildContext context) {
+
+    final size = MediaQuery.of(context).size;
+
     return FutureBuilder(
-      future: getUsers(),
+      future: getFuneraria(),
       builder: ((context, snapshot) {
 
         if(snapshot.hasData){
+          
           return ListView.builder(
             itemCount: snapshot.data?.length,
-            itemBuilder: ((context, index) {
-              return Text(snapshot.data?[index]['nombre']);
+            itemBuilder: ( ((context, index) {
+
+              return FunerariaBotonPersonalizado(
+                titulo: snapshot.data?[index]['titulo'], 
+                descripcion: snapshot.data?[index]['descripcion'], 
+                image: 'assets/raza_grande.png', 
+                precio: snapshot.data![index]['precio'].toString()
+              );
             })
+            )
           );
         }else{
           return const Center(child: CircularProgressIndicator());
         }
-      })
+
+      }),
     );
   }
 }

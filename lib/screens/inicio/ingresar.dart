@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:puente_arcoiris/routes/app-routes.dart';
+import 'package:puente_arcoiris/screens/inicio/menu_login.dart';
 import 'package:puente_arcoiris/theme/app_theme.dart';
 
 
@@ -38,7 +39,7 @@ class IngresarScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: (){
-                    Navigator.pushNamed(context, AppRoutes.rutaLogin);
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const MenuLoginScreen(initialIndex: 0)));
                   }, 
                   child: const Text('Iniciar Sesion', style: TextStyle(color: Colors.black, fontFamily: 'Comic Neue', fontSize: 16),),
                 ),
@@ -47,7 +48,9 @@ class IngresarScreen extends StatelessWidget {
                   children: [
                     const Text('¿No tienes cuenta?', style: TextStyle(color: Colors.white, fontFamily: 'Comic Neue'),),
                     TextButton(
-                      onPressed: (){}, 
+                      onPressed: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> const MenuLoginScreen(initialIndex: 1)));
+                      }, 
                       child: const Text('Registrate', style: TextStyle(color: AppTheme.primary, fontFamily: 'Comic Neue', decoration: TextDecoration.underline),)
                     )
                   ],

@@ -7,16 +7,17 @@ class InputPersonalizado extends StatelessWidget {
   final String? hintText;
   final String? labelText;
   final String? helperText;
+  final TextEditingController? controlador; 
 
   const InputPersonalizado({
-    Key? key, this.keyboardType, this.obscureText = false, this.hintText, this.labelText, this.helperText,
+    Key? key, this.keyboardType, this.obscureText = false, this.hintText, this.labelText, this.helperText,this.controlador,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: controlador,
       autofocus: false,
-      initialValue: '',
       keyboardType: keyboardType,
       obscureText: obscureText  ,
       autovalidateMode: AutovalidateMode.onUserInteraction,

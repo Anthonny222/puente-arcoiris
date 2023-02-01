@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:puente_arcoiris/theme/app_theme.dart';
 import 'package:puente_arcoiris/widgets/widgets.dart';
 
 class TiendaScreen extends StatelessWidget {

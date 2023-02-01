@@ -7,18 +7,19 @@ import 'package:toggle_switch/toggle_switch.dart';
 
 class MenuLoginScreen extends StatefulWidget {
 
-    
-   
-  const MenuLoginScreen({Key? key}) : super(key: key);
+  final int? initialIndex;
+
+  const MenuLoginScreen({Key? key, this.initialIndex }) : super(key: key);
 
   @override
-  State<MenuLoginScreen> createState() => _MenuLoginScreenState();
+  State<MenuLoginScreen> createState() => MenuLoginScreenState();
 }
 
-class _MenuLoginScreenState extends State<MenuLoginScreen> {
+class MenuLoginScreenState extends State<MenuLoginScreen> {
 
-  int? initialIndex = 0;
+  late int?_initialIndex = widget.initialIndex;
   
+
   @override
   Widget build(BuildContext context) {
 
@@ -68,16 +69,17 @@ class _MenuLoginScreenState extends State<MenuLoginScreen> {
                           totalSwitches: 2,
                           labels: const ['Iniciar Sesion', 'Registrarse'],
                           radiusStyle: true,
-                          initialLabelIndex: initialIndex,                       
+                          initialLabelIndex: _initialIndex,                       
                           onToggle: (index){
+                            _initialIndex = index;
                             setState(() {
-                              initialIndex  = index;
+                              
                             });
                           },
                         ),
-                        if(initialIndex == 0)
+                        if(_initialIndex == 0)
                           const LoginScreen()
-                        else if(initialIndex == 1)
+                        else if(_initialIndex == 1)
                           const RegistrarseScreen()
                       ],
                     ),

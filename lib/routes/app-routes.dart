@@ -31,7 +31,7 @@ class AppRoutes{
     'menu_nav': (BuildContext context) => const MenuNavigationScreen(), 
     'perruqueria': (BuildContext context) => const PerruqueriaScreen(),
     'tienda': (BuildContext context) => const TiendaScreen(),
-    'salud': (BuildContext context) => const SaludScreen(),
+    'salud': (BuildContext context) => SaludScreen(),
     'funeraria': (BuildContext context) => const FunerariaScreen(),
     
 

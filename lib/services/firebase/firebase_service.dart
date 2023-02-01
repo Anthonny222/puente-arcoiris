@@ -5,19 +5,27 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 FirebaseFirestore db = FirebaseFirestore.instance;
 
 
-Future<List> getUsers() async {
+Future<List> getFuneraria() async {
 
-  List users = [];
+  List funeraria = [];
   
-  CollectionReference collectionReferenceUsers = db.collection('users'); // Referenciar a la firestore 
+  CollectionReference collectionReferenceUsers = db.collection('funeraria'); // Referenciar a la firestore 
 
-  QuerySnapshot queryUsers = await collectionReferenceUsers.get(); // traer de la coleccion de Firestore
+  QuerySnapshot queryFuneraria = await collectionReferenceUsers.get(); // traer de la coleccion de Firestore
 
 
-  queryUsers.docs.forEach((element) {  // Instancia en el docs para traer todos los elementos
-    users.add(element.data()); // agregarmos al array antes creado la data que se trajo
+  queryFuneraria.docs.forEach((element) {  // Instancia en el docs para traer todos los elementos
+    funeraria.add(element.data()); // agregarmos al array antes creado la data que se trajo
   });
 
-  return users;
+  return funeraria;
+
+}
+
+Future<void> addUsers(String name, String raza, int edad, String enfermedad, String descripcion) async {
+
+  await db.collection('salud').add({"nombre": name,  "raza": raza, "edad": edad, "enfermedad": enfermedad, "descripcion": descripcion});
+
+
 
 }
