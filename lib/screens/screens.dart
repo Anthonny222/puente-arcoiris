@@ -11,7 +11,6 @@ export 'package:puente_arcoiris/screens/inicio/registrarse.dart';
 
 export 'package:puente_arcoiris/screens/menu/menu_navigation.dart';
 
-export 'package:puente_arcoiris/screens/menu/menu_principal.dart';
 export 'package:puente_arcoiris/screens/menu/perruqueria.dart';
 export 'package:puente_arcoiris/screens/menu/tienda.dart';
 export 'package:puente_arcoiris/screens/menu/salud.dart';

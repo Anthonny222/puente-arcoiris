@@ -26,9 +26,9 @@ class AppRoutes{
     'inicio': (BuildContext context) => const IngresarScreen(),
     'login': (BuildContext context) => const MenuLoginScreen(),
     
-    'menu_p': (BuildContext context) => const MenuPrincipalScreen(),
     
     'menu_nav': (BuildContext context) => const MenuNavigationScreen(), 
+    
     'perruqueria': (BuildContext context) => const PerruqueriaScreen(),
     'tienda': (BuildContext context) => const TiendaScreen(),
     'salud': (BuildContext context) => SaludScreen(),

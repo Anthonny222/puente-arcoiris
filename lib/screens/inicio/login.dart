@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
         SizedBox(height: size.height*0.04),
         ElevatedButton(
           onPressed: (){
-            Navigator.pushNamed(context, AppRoutes.rutaMenuPrincipal);
+            Navigator.pushNamed(context, AppRoutes.rutaMenuNav);
           },
           child: 
           const Text(
