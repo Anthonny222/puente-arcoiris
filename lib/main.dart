@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Puente Arcoiris',
         theme: AppTheme.lighTheme,
-        initialRoute: AppRoutes.rutaInicial,
+        initialRoute: AppRoutes.rutaMenuNav,
         routes: AppRoutes.routes,
       ),
     );

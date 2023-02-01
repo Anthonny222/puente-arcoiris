@@ -14,13 +14,16 @@ Future<List> getFuneraria() async {
   QuerySnapshot queryFuneraria = await collectionReferenceUsers.get(); // traer de la coleccion de Firestore
 
 
-  queryFuneraria.docs.forEach((element) {  // Instancia en el docs para traer todos los elementos
+  for (var element in queryFuneraria.docs) {  // Instancia en el docs para traer todos los elementos
     funeraria.add(element.data()); // agregarmos al array antes creado la data que se trajo
-  });
+  }
 
   return funeraria;
 
 }
+
+
+
 
 Future<void> addUsers(String name, String raza, int edad, String enfermedad, String descripcion) async {
 

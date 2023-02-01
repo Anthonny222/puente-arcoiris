@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:puente_arcoiris/routes/app-routes.dart';
 import 'package:puente_arcoiris/theme/app_theme.dart';
 
 class FunerariaBotonPersonalizado extends StatelessWidget {
@@ -58,7 +59,9 @@ class FunerariaBotonPersonalizado extends StatelessWidget {
               )
             ],
           ),
-          onPressed: (){},
+          onPressed: (){
+            Navigator.pushNamed(context, AppRoutes.funeDatos);
+          },
         ),
       ),
     );

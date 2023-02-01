@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:puente_arcoiris/routes/app-routes.dart';
 
 import '../models/providers/ui_provider.dart';
 
@@ -32,7 +33,7 @@ class AppBarPersonalizado extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        IconButton(icon: Image.asset('assets/avatar.png', height: 40),onPressed: (){},padding: EdgeInsets.zero),
+        IconButton(icon: Image.asset('assets/avatar.png', height: 40),onPressed: (){ Navigator.pushNamed(context, AppRoutes.perfil);},padding: EdgeInsets.zero),
         Text(titulo, style: const TextStyle(color: Colors.black, fontFamily: 'Comic Neue'),),
         IconButton(
           onPressed: (){}, 

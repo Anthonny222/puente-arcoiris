@@ -10,8 +10,6 @@ class FunerariaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final size = MediaQuery.of(context).size;
-
     return FutureBuilder(
       future: getFuneraria(),
       builder: ((context, snapshot) {
