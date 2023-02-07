@@ -33,8 +33,7 @@ class AppRoutes{
     'tienda': (BuildContext context) => const TiendaScreen(),
     'salud': (BuildContext context) => SaludScreen(),
     'funeraria': (BuildContext context) => const FunerariaScreen(),
-    
-    'funeraria_datos': (BuildContext context) => const FunerariaDatosScreen(),
+
 
     'perfil': (BuildContext context) => PerfilScreen()
 

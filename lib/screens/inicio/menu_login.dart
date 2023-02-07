@@ -50,14 +50,14 @@ class MenuLoginScreenState extends State<MenuLoginScreen> {
                     borderRadius: BorderRadius.circular(25)
                   ),
                   height: size.height*0.6,
-                  width: size.width*0.75,
+                  width: size.width*0.77,
                   margin: EdgeInsets.only(top: size.height*0.07),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                     child: Column(
                       children: [
                         ToggleSwitch(
-                          minWidth: 110,
+                          minWidth: 120,
                           minHeight: 45,
                           cornerRadius: 50.0,
                           activeBgColors: const [[AppTheme.primary], [AppTheme.primary]],

@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:puente_arcoiris/routes/app-routes.dart';
+import 'package:puente_arcoiris/screens/menu/funeraria_datos.dart';
 import 'package:puente_arcoiris/theme/app_theme.dart';
 
 class FunerariaBotonPersonalizado extends StatelessWidget {
@@ -33,7 +33,12 @@ class FunerariaBotonPersonalizado extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Image(image: AssetImage(image), fit: BoxFit.cover),
+              FadeInImage(
+                placeholder: const AssetImage('assets/non-image.png'),
+                height: 120,
+                image: NetworkImage(image), 
+                fit: BoxFit.cover
+              ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
                 child: SizedBox(
@@ -60,7 +65,8 @@ class FunerariaBotonPersonalizado extends StatelessWidget {
             ],
           ),
           onPressed: (){
-            Navigator.pushNamed(context, AppRoutes.funeDatos);
+              
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> FunerariaDatosScreen(titulo: titulo)));
           },
         ),
       ),

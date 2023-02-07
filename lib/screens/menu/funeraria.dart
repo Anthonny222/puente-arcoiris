@@ -18,16 +18,15 @@ class FunerariaScreen extends StatelessWidget {
           
           return ListView.builder(
             itemCount: snapshot.data?.length,
-            itemBuilder: ( ((context, index) {
+            itemBuilder: ((context, index) {
 
               return FunerariaBotonPersonalizado(
                 titulo: snapshot.data?[index]['titulo'], 
                 descripcion: snapshot.data?[index]['descripcion'], 
-                image: 'assets/raza_grande.png', 
+                image: snapshot.data?[index]['imagen'], 
                 precio: snapshot.data![index]['precio'].toString()
               );
             })
-            )
           );
         }else{
           return const Center(child: CircularProgressIndicator());

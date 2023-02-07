@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:puente_arcoiris/services/firebase/firebase_service.dart';
 
 import '../../widgets/widgets.dart';
 
@@ -11,36 +12,29 @@ class PerruqueriaScreen extends StatelessWidget {
 
     final size = MediaQuery.of(context).size;
 
-    return ListView(
-        children:[
-            SizedBox(
-              height: size.height* 0.02,
-            ),
-            const CartaBotonPersonalizado(
-              titulo: 'Razas Pequeñas',
-              kgTipo: '10 kg o menos',
-              image: 'assets/raza_pequeña.png',
-              descripcion: 'adsas',
-              precio: '5',
-            ),
+    return FutureBuilder(
+      future: getPerruqueria(),
+      builder: ((context, snapshot) {
+        if(snapshot.hasData){
+          
+          return ListView.builder(
+            itemCount: snapshot.data?.length,
+            itemBuilder: ((context, index) {
 
-            const CartaBotonPersonalizado(
-              titulo: 'Razas Medianas', 
-              kgTipo: '10-30 kg ', 
-              image: 'assets/raza_mediana.png', 
-              descripcion: 'adsa', 
-              precio: '8',
-            ),
-
-            const CartaBotonPersonalizado(
-              titulo: 'Razas Grandes',
-              kgTipo: '30kg o mas',
-              image: 'assets/raza_grande.png',
-              descripcion: 'dadsa',
-              precio: '15',
-            ),
-        ]
-      );
+              return CartaBotonPersonalizado(
+                titulo: snapshot.data?[index]['titulo'], 
+                kgTipo: snapshot.data?[index]['kgTipo'], 
+                descripcion: snapshot.data?[index]['descripcion'], 
+                image: snapshot.data?[index]['image'], 
+                precio: snapshot.data![index]['precio'].toString()
+              ); 
+            }),
+          );
+        }else{
+          return const Center(child: CircularProgressIndicator());
+        }
+      }),
+    );
   }
 }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:puente_arcoiris/services/firebase/firebase_service.dart';
 import 'package:puente_arcoiris/widgets/widgets.dart';
 
 class TiendaScreen extends StatelessWidget {
@@ -8,43 +9,27 @@ class TiendaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    final size = MediaQuery.of(context).size;
-    
-    return SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Row( 
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const[
-                CartaTienda(),
-                CartaTienda()
-              ],
-            ),
-            Row( 
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const[
-                CartaTienda(),
-                CartaTienda()
-              ],
-            ),
-            Row( 
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const[
-                CartaTienda(),
-                CartaTienda()
-              ],
-            ),
-            Row( 
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const[
-                CartaTienda(),
-                CartaTienda()
-              ],
-            )
-          ],
-        ),
-      );
+    return FutureBuilder(
+      future: getTienda(),
+      builder: (context, snapshot){
+        if(snapshot.hasData){
+          return GridView.builder(
+            itemCount: snapshot.data?.length,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2
+            ), 
+            itemBuilder: (context, index){
+              return CartaTienda(
+                foto: snapshot.data?[index]['foto'],
+                nombre: snapshot.data?[index]['nombre'],
+              );
+            }
+          );
+        }else{
+          return const Center(child: CircularProgressIndicator());
+        }
+      }
+    );
   }
 }
 
