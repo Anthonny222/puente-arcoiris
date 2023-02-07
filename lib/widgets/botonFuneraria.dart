@@ -22,10 +22,10 @@ class FunerariaBotonPersonalizado extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return SizedBox(
-      width: size.width *0.9,
-      height: size.height * 0.26,
+      width: size.width *0.85,
+      height: size.height * 0.23,
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 3, vertical: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 6),
         child: TextButton(
           style: TextButton.styleFrom(
             backgroundColor: Colors.grey[100],
@@ -35,27 +35,24 @@ class FunerariaBotonPersonalizado extends StatelessWidget {
             children: [
               FadeInImage(
                 placeholder: const AssetImage('assets/non-image.png'),
-                height: 120,
+                height: size.height*0.15,
                 image: NetworkImage(image), 
                 fit: BoxFit.cover
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
                 child: SizedBox(
-                  width: size.width *0.53,
+                  width: size.width *0.52,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Text(titulo, style: const TextStyle(fontFamily: 'Comic Neue Bold', fontSize: 18, color: Colors.black)),
-                      const SizedBox(height: 20,),
-                      Text(descripcion, maxLines: 4, overflow: TextOverflow.ellipsis, style: const TextStyle(fontFamily: 'Comic Neue', fontSize: 17, color: Colors.black)),
-                      const SizedBox(height: 20),
+                      Text(descripcion, textAlign: TextAlign.left, maxLines: 4, overflow: TextOverflow.ellipsis, style: const TextStyle(fontFamily: 'Comic Neue', fontSize: 17, color: Colors.black)),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          const SizedBox(width: 130,),
-                          Text('\$ $precio', style: const TextStyle(fontFamily: 'Comic Neue Bold', color: Colors.black))
+                          Text('\$ $precio',style: const TextStyle(fontFamily: 'Comic Neue Bold', color: Colors.black))
                         ],
                       )
                     ],

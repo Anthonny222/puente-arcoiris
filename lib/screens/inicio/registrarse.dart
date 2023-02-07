@@ -11,27 +11,34 @@ class RegistrarseScreen extends StatelessWidget {
     
     final size = MediaQuery.of(context).size;
 
-    return Column(
-      children: [
-        SizedBox( height: size.height * 0.02,),
-        const InputPersonalizado(labelText: 'Nombre', hintText: 'Nombre'),
-        const InputPersonalizado(labelText: 'Apellido', hintText: 'Apellido'),
-        const InputPersonalizado(labelText: 'Correo', hintText: 'Correo', keyboardType: TextInputType.emailAddress),
-        const InputPersonalizado(labelText: 'Contraseña', hintText: 'Contraseña', obscureText: true),
-        const InputPersonalizado(labelText: 'Telefono', hintText: 'Telefono', keyboardType: TextInputType.phone),
-        SizedBox( height: size.height * 0.03,),
-        ElevatedButton(
-          onPressed: (){}, 
-          child: const Text(
-            'Registrarse',
-            style: TextStyle(
-              color: Colors.black,
-              fontFamily: 'Comic Neue',
-              fontSize: 16
-            ),
+    return SizedBox(
+      height: size.height*0.5,
+      width: size.width*0.9,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Column(
+            children: const [
+              InputPersonalizado(labelText: 'Nombre', hintText: 'Nombre'),
+              InputPersonalizado(labelText: 'Apellido', hintText: 'Apellido'),
+              InputPersonalizado(labelText: 'Correo', hintText: 'Correo', keyboardType: TextInputType.emailAddress),
+              InputPersonalizado(labelText: 'Contraseña', hintText: 'Contraseña', obscureText: true),
+              InputPersonalizado(labelText: 'Telefono', hintText: 'Telefono', keyboardType: TextInputType.phone),
+            ],
+          ),     
+          ElevatedButton(
+            onPressed: (){}, 
+            child: const Text(
+              'Registrarse',
+              style: TextStyle(
+                color: Colors.black,
+                fontFamily: 'Comic Neue',
+                fontSize: 16
+              ),
+            )
           )
-        )
-      ],
+        ],
+      ),
     );
   }
 }

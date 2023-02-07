@@ -41,24 +41,24 @@ class MenuLoginScreenState extends State<MenuLoginScreen> {
                   height: size.height*0.1,
                 ),
                 Image(image: const AssetImage('assets/puente-arcoiris.png'),
-                  fit: BoxFit.contain,
-                  width: size.width * 0.4 ,
+                  fit: BoxFit.cover,
+                  width: size.width * 0.4,
                 ),
+                SizedBox(height: size.height * 0.05),
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white54,
                     borderRadius: BorderRadius.circular(25)
                   ),
-                  height: size.height*0.6,
-                  width: size.width*0.77,
-                  margin: EdgeInsets.only(top: size.height*0.07),
+                  height: size.height*0.63,
+                  width: size.width*0.80,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
                     child: Column(
                       children: [
                         ToggleSwitch(
-                          minWidth: 120,
-                          minHeight: 45,
+                          minWidth: size.width*0.32,
+                          minHeight: size.height * 0.06,
                           cornerRadius: 50.0,
                           activeBgColors: const [[AppTheme.primary], [AppTheme.primary]],
                           activeFgColor: const Color.fromARGB(255, 0, 0, 0),
